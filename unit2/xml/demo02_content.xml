@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE student [
+        <!ELEMENT student (name,age,address)*>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT address (#PCDATA)>
+        <!ATTLIST name
+                ss CDATA #REQUIRED>
+        <!ELEMENT age (#PCDATA)>
+        ]>
+<student>
+    <name ss="zhanlong">aaa</name>
+    <age>10&lt;</age>
+    <address>DD</address>
+</student>

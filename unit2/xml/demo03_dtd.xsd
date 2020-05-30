@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://zhanlong.imwork.net"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="name">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="xs:int" name="class"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="age" type="xs:byte"/>
+    <xs:element name="salary" type="xs:float"/>
+    <xs:element name="address" type="xs:string"/>
+    <xs:element name="student">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:element ref="name"/>
+                <xs:element ref="age"/>
+                <xs:element ref="salary"/>
+                <xs:element ref="address"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
