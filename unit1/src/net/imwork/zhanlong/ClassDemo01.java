@@ -4,6 +4,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * @author 展龙
+ */
 public class ClassDemo01
 {
     private static Scanner scanner = new Scanner(System.in);
@@ -43,7 +46,7 @@ public class ClassDemo01
             Student student = new Student(name, number, Integer.parseInt(age));
 
             System.out.println(student);
-            if (scanner.nextLine().equals("exit"))
+            if ("exit".equals(scanner.nextLine()))
             {
                 System.exit(0);
             }
@@ -80,11 +83,7 @@ class Student
         return name;
     }
 
-    /**
-     * 设置
-     * @param name
-     */
-    public void setName(String name)
+   public void setName(String name)
     {
         this.name = name;
     }
@@ -98,10 +97,7 @@ class Student
         return number;
     }
 
-    /**
-     * 设置
-     * @param number
-     */
+
     public void setNumber(String number)
     {
         this.number = number;
@@ -116,15 +112,13 @@ class Student
         return age;
     }
 
-    /**
-     * 设置
-     * @param age
-     */
+
     public void setAge(int age)
     {
         this.age = age;
     }
 
+    @Override
     public String toString()
     {
         return "Student{name = " + name + ", number = " + number + ", age = " + age + "}";
